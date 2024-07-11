@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} 
+
+  ul
+    each message in messages
+      li 
+         p= message.user
+          |  said: 
+          |  #{message.text}
+          |  at 
+          |  #{message.added.toLocaleString()}
+
+      
+
